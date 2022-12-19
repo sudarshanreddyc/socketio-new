@@ -27,6 +27,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(443, () => {
+server.listen(2096, () => {
   console.log("SERVER IS RUNNING");
 });
