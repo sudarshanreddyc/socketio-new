@@ -2,7 +2,7 @@ import "./App.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io.connect("http://localhost:443");
+const socket = io.connect("http://localhost:8080");
 
 function App() {
   //Room State
