@@ -2,7 +2,7 @@ import "./App.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io.connect("http://localhost:3000");
+const socket = io.connect("http://localhost:443");
 
 function App() {
   //Room State
@@ -29,26 +29,20 @@ function App() {
   }, [socket]);
   return (
     <div className="App">
-      <div>
-        <input
-          placeholder="Room Number..."
-          onChange={(event) => {
-            setRoom(event.target.value);
-          }}
-        />
-        <button onClick={joinRoom}> Join Room</button>
-      </div>
-      <br/>
-      <div>
-        <input
-          placeholder="Message..."
-          onChange={(event) => {
-            setMessage(event.target.value);
-          }}
-        />
-        <button onClick={sendMessage}> Send Message</button>
-      </div>
-      
+      <input
+        placeholder="Room Number..."
+        onChange={(event) => {
+          setRoom(event.target.value);
+        }}
+      />
+      <button onClick={joinRoom}> Join Room</button>
+      <input
+        placeholder="Message..."
+        onChange={(event) => {
+          setMessage(event.target.value);
+        }}
+      />
+      <button onClick={sendMessage}> Send Message</button>
       <h1> Message:</h1>
       {messageReceived}
     </div>
