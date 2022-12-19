@@ -10,9 +10,10 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST"],
   },
+  transports: ['polling']
 });
 
 io.on("connection", (socket) => {
@@ -27,6 +28,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(2096, () => {
-  console.log("SERVER IS RUNNING");
+server.listen(8088, () => {
+  console.log("SERVER IS LISTENING TO 8088");
 });
