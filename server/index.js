@@ -13,7 +13,6 @@ const io = new Server(server, {
     origin: "*",
     methods: ["GET", "POST"],
   },
-  path: '/octagon/socket.io'
 });
 
 io.on("connection", (socket) => {
