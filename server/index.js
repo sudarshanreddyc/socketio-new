@@ -28,6 +28,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(8088, () => {
+server.listen(8080, () => {
   console.log("SERVER IS RUNNING");
 });

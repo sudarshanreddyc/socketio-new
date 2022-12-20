@@ -2,7 +2,7 @@ import "./App.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io.connect('https://dev.octagon.com:8088', {path: '/octagon/socket.io'});
+const socket = io.connect("http://localhost:8080");
 
 function App() {
   //Room State
