@@ -27,6 +27,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(8080, () => {
+server.listen("https://blog-frontend-b4d.pages.dev/apis/posts", () => {
   console.log("SERVER IS RUNNING");
 });

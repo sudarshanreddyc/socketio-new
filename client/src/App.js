@@ -2,7 +2,7 @@ import "./App.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io.connect("https://socketio-new.pages.dev");
+const socket = io.connect("https://blog-frontend-b4d.pages.dev/apis/posts");
 
 function App() {
   //Room State
