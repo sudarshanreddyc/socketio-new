@@ -10,7 +10,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://blog-frontend-b4d.pages.dev",
     methods: ["GET", "POST"],
   },
 });
