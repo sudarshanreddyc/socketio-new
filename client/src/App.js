@@ -2,7 +2,7 @@ import "./App.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
 
-const socket = io.connect("https://blog-frontend-b4d.pages.dev/apis/posts");
+const socket = io.connect("http://localhost:3001"); // or your actual server address
 
 function App() {
   //Room State
@@ -22,7 +22,7 @@ function App() {
     socket.emit("send_message", { message, room });
   };
 
-  useEffect(() => { 
+  useEffect(() => {
     socket.on("receive_message", (data) => {
       setMessageReceived(data.message);
     });

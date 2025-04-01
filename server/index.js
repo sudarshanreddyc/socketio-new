@@ -10,8 +10,9 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://blog-frontend-b4d.pages.dev",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
@@ -27,6 +28,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen("https://blog-frontend-b4d.pages.dev/apis/posts", () => {
-  console.log("SERVER IS RUNNING");
+server.listen(3001, () => {
+  console.log("SERVER IS RUNNING on port 3001");
 });
